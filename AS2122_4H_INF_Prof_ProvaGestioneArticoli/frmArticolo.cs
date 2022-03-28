@@ -9,8 +9,10 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
         public DialogResult Status { get => status; }
 
 
+        // [5]
         private int codice;
         private Articolo articolo;
+        // [6]
         public Articolo Articolo { get => articolo; }
 
 
@@ -23,6 +25,7 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
 
         private void btnSalva_Click(object sender, EventArgs e)
         {
+            // [7]
             if (txtDescrizione.Text == "")
             {
                 MessageBox.Show("Non é presente nessuna descrizione");

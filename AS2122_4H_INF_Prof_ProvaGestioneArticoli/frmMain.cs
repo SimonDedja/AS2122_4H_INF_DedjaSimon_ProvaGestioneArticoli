@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
@@ -18,7 +12,7 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
         {
             InitializeComponent();
 
-            // istanzio la lista di articoli
+            // [4] istanzio la lista di articoli
             articoli = new();
         }
 
@@ -30,7 +24,7 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
 
             if (f.Status == DialogResult.OK)
             {
-                // aggiungi l'articolo all'elenco di articoli
+                // [1] aggiungi l'articolo all'elenco di articoli
                 articoli.Add(f.Articolo);
                 
                 lblArticoliInseriti.Text = $"Articoli ({articoli.Count})";
@@ -43,10 +37,11 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
             switch (cmbVisualizza.Text)
             {
                 case "Visualizza articoli":
+
+                    // [2]
                     foreach (var articolo in articoli)
-                    {
                         lstElenco.Items.Add(articolo);
-                    }
+
                     break;
             }
         }
@@ -58,7 +53,7 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
             // Find the string in ListBox.
             int index = lstElenco.FindString(curItem);
 
-            // Modifico il testo di lblDescrizione
+            // [3] Modifico il testo di lblDescrizione
             lblDescrizione.Text = articoli[index].Descrizione;
             lblUnitaMisura.Text = articoli[index].UnitaMisura;
             lblPrezzo.Text = articoli[index].Prezzo.ToString();
