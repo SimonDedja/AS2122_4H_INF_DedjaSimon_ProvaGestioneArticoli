@@ -57,8 +57,8 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
             // Find the string in ListBox.
             int index = lstElenco.FindString(curItem);
 
-            // TODO: (3) aggiungere visualizzazione dettaglio articolo nelle label
-            // ... lblDescrizione.Text = articoli[index].Descrizione;
+            // Modifico il testo di lblDescrizione
+            lblDescrizione.Text = articoli[index].Visualizzati();
         }
     }
 }
