@@ -12,16 +12,14 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
 {
     public partial class frmArticolo : Form
     {
+        DialogResult status = DialogResult.Cancel;
+        public DialogResult Status { get => status; }
+
+
+        private Articolo articolo;
         /// <summary>Proprietá contenente l'articolo istnaziato dalla Form frmArticolo</summary>
         public Articolo Articolo { get => articolo; }
 
-        DialogResult status = DialogResult.Cancel;
-
-        private Articolo articolo;
-
-        public DialogResult Status { get { return status; } }
-
-        // TODO: (6) aggiungere property di sola lettura dei dati inseriti nella frmArticoli per l'utilizzo in frmMain
 
         public frmArticolo()
         {
