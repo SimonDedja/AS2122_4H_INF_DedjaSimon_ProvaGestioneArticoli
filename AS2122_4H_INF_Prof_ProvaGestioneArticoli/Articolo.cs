@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
+﻿namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
 {
     public class Articolo
     {
-        static int codice;
+        int codice;
         string descrizione;
         string unitaMisura;
         double prezzo;
@@ -20,8 +14,10 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
 
         public Articolo(int codice, string descrizione, string unitaMisura, double prezzo)
         {
-            // TODO: (10) impostazione costruttore classe Articolo come utilizzato da frmMain
-            // ...
+            this.codice = codice;
+            this.descrizione = descrizione;
+            this.unitaMisura = unitaMisura;
+            this.prezzo = prezzo;
         }
 
         public string Visualizzati()

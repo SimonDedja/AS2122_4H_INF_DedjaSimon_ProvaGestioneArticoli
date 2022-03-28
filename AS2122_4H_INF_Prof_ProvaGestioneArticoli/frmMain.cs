@@ -24,15 +24,14 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
 
         private void btnAggiungiArticolo_Click(object sender, EventArgs e)
         {
-            frmArticolo f = new frmArticolo();
+            frmArticolo f = new frmArticolo(articoli.Count);
 
             f.ShowDialog();
 
             if (f.Status == DialogResult.OK)
             {
                 // aggiungi l'articolo all'elenco di articoli
-                frmArticolo frmArticolo = new();
-                articoli.Add(frmArticolo.Articolo);
+                articoli.Add(f.Articolo);
                 
                 lblArticoliInseriti.Text = $"Articoli ({articoli.Count})";
             }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
@@ -16,15 +9,17 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
         public DialogResult Status { get => status; }
 
 
+        private int codice;
         private Articolo articolo;
-        /// <summary>Proprietá contenente l'articolo istnaziato dalla Form frmArticolo</summary>
         public Articolo Articolo { get => articolo; }
 
 
-        public frmArticolo()
+        public frmArticolo(int codice)
         {
             InitializeComponent();
+            this.codice = codice;
         }
+
 
         private void btnSalva_Click(object sender, EventArgs e)
         {
@@ -46,7 +41,7 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
                 return;
             }
 
-            articolo = new Articolo(1, txtDescrizione.Text, cmbUnitaMisura.Text, double.Parse(txtPrezzo.Text));
+            articolo = new Articolo(codice, txtDescrizione.Text, cmbUnitaMisura.Text, double.Parse(txtPrezzo.Text));
 
             status = DialogResult.OK;
             Close();
