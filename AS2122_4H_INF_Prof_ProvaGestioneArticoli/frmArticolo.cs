@@ -12,6 +12,11 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
 {
     public partial class frmArticolo : Form
     {
+        private Articolo articolo;
+
+        /// <summary>Proprietá contenente l'articolo istnaziato dalla Form frmArticolo</summary>
+        public Articolo Articolo { get => articolo; }
+
         DialogResult status = DialogResult.Cancel;
 
         // TODO: (5) aggiungere attributi privati dei dati inseriti nella frmArticoli

@@ -19,7 +19,6 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
             InitializeComponent();
 
             // TODO: (4) creazione lista articoli
-            // ...
         }
 
         private void btnAggiungiArticolo_Click(object sender, EventArgs e)
@@ -31,9 +30,9 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
             if (f.Status == DialogResult.OK)
             {
                 // aggiungi l'articolo all'elenco di articoli
-                // TODO: (1) aggiungere l'articolo creato dai dati di frmArticoli nella lista articoli
-                // ...
-
+                frmArticolo frmArticolo = new();
+                articoli.Add(frmArticolo.Articolo);
+                
                 lblArticoliInseriti.Text = $"Articoli ({articoli.Count})";
             }
         }
