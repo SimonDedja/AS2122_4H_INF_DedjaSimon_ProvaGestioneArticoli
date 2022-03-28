@@ -43,8 +43,9 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
             switch (cmbVisualizza.Text)
             {
                 case "Visualizza articoli":
-                    // TODO: (2) aggiungere visualizzazione articoli inseriti nella listbox
-                    // ... lstElenco.Items.Add(a.Visualizzati()); 
+                    lstElenco.DataSource = null;
+                    lstElenco.DataSource = articoli;
+                    lstElenco.DisplayMember = "Visualizzati";
                     break;
             }
         }
