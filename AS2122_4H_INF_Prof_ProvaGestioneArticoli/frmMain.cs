@@ -18,7 +18,8 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
         {
             InitializeComponent();
 
-            // TODO: (4) creazione lista articoli
+            // istanzio la lista di articoli
+            articoli = new();
         }
 
         private void btnAggiungiArticolo_Click(object sender, EventArgs e)
