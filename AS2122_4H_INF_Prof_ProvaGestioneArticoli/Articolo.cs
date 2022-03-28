@@ -24,5 +24,10 @@
         {
             return $"{descrizione} {unitaMisura} {prezzo} ({codice})";
         }
+
+        public override string ToString()
+        {
+            return Descrizione;
+        }
     }
 }

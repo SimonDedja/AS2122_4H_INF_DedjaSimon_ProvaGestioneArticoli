@@ -43,9 +43,10 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
             switch (cmbVisualizza.Text)
             {
                 case "Visualizza articoli":
-                    lstElenco.DataSource = null;
-                    lstElenco.DataSource = articoli;
-                    lstElenco.DisplayMember = "Visualizzati";
+                    foreach (var articolo in articoli)
+                    {
+                        lstElenco.Items.Add(articolo);
+                    }
                     break;
             }
         }
@@ -58,7 +59,9 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
             int index = lstElenco.FindString(curItem);
 
             // Modifico il testo di lblDescrizione
-            lblDescrizione.Text = articoli[index].Visualizzati();
+            lblDescrizione.Text = articoli[index].Descrizione;
+            lblUnitaMisura.Text = articoli[index].UnitaMisura;
+            lblPrezzo.Text = articoli[index].Prezzo.ToString();
         }
     }
 }
